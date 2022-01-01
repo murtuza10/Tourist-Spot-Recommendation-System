@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+<!-- <div class="jumbotron">
+  <h1>Register Here!</h1>
+  <form method="POST">
+    {{wtf.quick_form(form)}}
+    <!--
+    {{form.hidden_tag()}}<br><br>
+    {{form.name.label}}  {{form.name()}}<br><br>
+    {{form.email.label}} {{form.email()}}<br><br>
+    {{form.username.label}}  {{form.username()}}<br><br>
+    {{form.password.label}}  {{form.password}}<br><br>
+    {{form.pass_confirm.label}}  {{form.pass_confirm}}<br><br>
+    {{form.submit()}}
+    -->
+
+  <!-- </form>
+</div> -->
+<form method="POST">
+{{form.hidden_tag()}}
+<div class="jumbo">
+  <br><br><br>
+  <div class="login_form">
+    <div class="container">
+      <div class="d-flex justify-content-center h-100">
+        <div class="card">
+          <div class="card-header">
+            <h3>Admin Signup</h3>
+          </div>
+          <div class="card-body">
+            <form method="POST">
+              <!-- <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div> -->
+              <!--	<input type="text" class="form-control" placeholder="username">-->
+              <!-- &nbsp&nbsp<h4 style="color:white">{{form.email.label()}} :&nbsp</h4>&nbsp{{ form.email(class_='form-control') }} -->
+
+              <!-- </div>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-key"></i></span>
+                </div>
+                &nbsp&nbsp<h4 style="color:white">{{form.password.label()}} :&nbsp</h4>&nbsp{{ form.password(class_='form-control') }}
+              </div>
+              <div class="form-group">
+                {{form.submit(class_='btn float-right login_btn')}}
+                <a href="{{url_for('users.register')}}"><input type="button" value="Signup" class="btn float-right login_btn"></a>
+              </div> -->
+              <div class="input-group form-group">
+                &nbsp&nbsp<h4 style="color:white">{{form.name.label()}} :&nbsp</h4>&nbsp{{ form.name(class_='form-control') }}
+              </div>
+              <br>
+              <div class="input-group form-group">
+                &nbsp&nbsp<h4 style="color:white">{{form.email.label()}} :&nbsp</h4>&nbsp{{ form.email(class_='form-control') }}
+              </div>
+              <br>
+              <div class="input-group form-group">
+                &nbsp&nbsp<h4 style="color:white">{{form.username.label()}} :&nbsp</h4>&nbsp{{ form.username(class_='form-control') }}
+              </div>
+              <br>
+              <div class="input-group form-group">
+                &nbsp&nbsp<h4 style="color:white">{{form.password.label()}} :&nbsp</h4>&nbsp{{ form.password(class_='form-control') }}
+              </div>
+              <br>
+              <div class="input-group form-group">
+                &nbsp&nbsp<h4 style="color:white">{{form.pass_confirm.label()}} :&nbsp</h4>&nbsp{{ form.pass_confirm(class_='form-control') }}
+              </div>
+              <div class="form-group">
+                {{form.submit(class_='btn float-right login_btn')}}
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <br><br><br>
+  </div>
+  </div>
+</div>
+</form>
+
+{% endblock %}

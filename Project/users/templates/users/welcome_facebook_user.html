@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  {% if screen_name %}
+    <h1>Welcome Facebook User!</h1>
+    <h2>Your name is {{screen_name}}</h2>
+    <h2>Your email is {{email}}</h2>
+  {% else %}
+    <p>You need to login first</p>
+  {% endif %}
+</div>
+{% endblock %}
